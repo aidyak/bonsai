@@ -1,6 +1,4 @@
 return {
-  {
-    dir = "aidyak/hitotose.nvim",
-    priority = 1001,
-  },
+  "aidyak/hitotose.nvim",
+  priority = 1001,
 }
