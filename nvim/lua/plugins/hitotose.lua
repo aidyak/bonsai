@@ -1,6 +1,6 @@
 return {
   {
-    dir = "~/.config/ghq/github.com/aidyak/hitotose.nvim",
+    dir = "aidyak/hitotose.nvim",
     priority = 1001,
   },
 }
