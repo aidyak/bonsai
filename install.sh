@@ -25,6 +25,7 @@ backup_and_link "$DOTFILES_DIR/git/gitconfig" "$HOME/.gitconfig"
 
 mkdir -p "$HOME/.config"
 backup_and_link "$DOTFILES_DIR/nvim-nightly" "$HOME/.config/nvim-nightly"
+backup_and_link "$DOTFILES_DIR/wezterm" "$HOME/.config/wezterm"
 
 # ==============================
 # install tools
