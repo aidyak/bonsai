@@ -44,5 +44,6 @@ echo "Installing tools..."
 "$DOTFILES_DIR/scripts/install_nvim_nightly.sh"
 "$DOTFILES_DIR/scripts/install_starship.sh"
 "$DOTFILES_DIR/scripts/install_sheldon.sh"
+"$DOTFILES_DIR/scripts/install_raycast.sh"
 
 echo "Setup complete!"
