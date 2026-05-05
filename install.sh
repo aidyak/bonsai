@@ -3,6 +3,21 @@ set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+load_homebrew() {
+    if command -v brew >/dev/null 2>&1; then
+        return
+    fi
+
+    if [ -x /opt/homebrew/bin/brew ]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+        return
+    fi
+
+    if [ -x /usr/local/bin/brew ]; then
+        eval "$(/usr/local/bin/brew shellenv)"
+    fi
+}
+
 backup_and_link() {
     src="$1"
     dest="$2"
@@ -41,6 +56,8 @@ backup_and_link "$DOTFILES_DIR/config/zsh" "$HOME/.config/zsh"
 
 echo "Installing tools..."
 
+"$DOTFILES_DIR/scripts/install_homebrew.sh"
+load_homebrew
 "$DOTFILES_DIR/scripts/install_nvim_nightly.sh"
 "$DOTFILES_DIR/scripts/install_starship.sh"
 "$DOTFILES_DIR/scripts/install_sheldon.sh"
