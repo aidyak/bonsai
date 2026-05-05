@@ -31,7 +31,9 @@ backup_and_link "$DOTFILES_DIR/git/gitconfig" "$HOME/.gitconfig"
 mkdir -p "$HOME/.config"
 backup_and_link "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
 backup_and_link "$DOTFILES_DIR/wezterm" "$HOME/.config/wezterm"
+backup_and_link "$DOTFILES_DIR/config/sheldon" "$HOME/.config/sheldon"
 backup_and_link "$DOTFILES_DIR/config/starship/starship.toml" "$HOME/.config/starship.toml"
+backup_and_link "$DOTFILES_DIR/config/zsh" "$HOME/.config/zsh"
 
 # ==============================
 # install tools
@@ -41,5 +43,6 @@ echo "Installing tools..."
 
 "$DOTFILES_DIR/scripts/install_nvim_nightly.sh"
 "$DOTFILES_DIR/scripts/install_starship.sh"
+"$DOTFILES_DIR/scripts/install_sheldon.sh"
 
 echo "Setup complete!"

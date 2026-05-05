@@ -5,6 +5,7 @@
 export LANG="ja_JP.UTF-8"
 export EDITOR="nvim"
 export VISUAL="nvim"
+export PATH="$HOME/.local/bin:$PATH"
 
 # 履歴ファイル
 HISTFILE="$HOME/.zsh_history"
@@ -31,24 +32,10 @@ colors
 
 PROMPT='%F{cyan}%n@%m%f:%F{yellow}%~%f %# '
 
-# よく使う alias
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls -CF'
-alias grep='grep --color=auto'
-
-# Git alias
-alias g='git'
-alias gst='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gl='git log --oneline --graph --decorate'
-alias gd='git diff'
-
-# 安全寄りの設定
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+# Zsh plugins
+if command -v sheldon >/dev/null 2>&1; then
+    eval "$(sheldon source)"
+fi
 
 # Starship prompt
 if command -v starship >/dev/null 2>&1; then
