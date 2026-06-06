@@ -1,0 +1,21 @@
+[window]
+padding = { x = 4, y = 4 }
+opacity = 0.9
+blur = true
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[font]
+size = 14.0
+offset = { x = 0, y = 4 }
+normal = { family = "Hack Nerd Font", style="Regular" }
+bold = { family = "Hack Nerd Font", style="Bold" }
+italic = { family = "Hack Nerd Font", style="Italic" }
+bold_italic = { family = "Hack Nerd Font", style="Bold Italic" }
+
+[terminal]
+shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux a -t 0 || tmux"] }
+
+

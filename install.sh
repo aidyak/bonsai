@@ -49,6 +49,9 @@ backup_and_link "$DOTFILES_DIR/wezterm" "$HOME/.config/wezterm"
 backup_and_link "$DOTFILES_DIR/config/sheldon" "$HOME/.config/sheldon"
 backup_and_link "$DOTFILES_DIR/config/starship/starship.toml" "$HOME/.config/starship.toml"
 backup_and_link "$DOTFILES_DIR/config/zsh" "$HOME/.config/zsh"
+mkdir -p "$HOME/.config/alacritty"
+backup_and_link "$DOTFILES_DIR/config/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
+backup_and_link "$DOTFILES_DIR/config/tmux/.tmux.conf" "$HOME/.tmux.conf"
 
 # ==============================
 # install tools
@@ -62,5 +65,6 @@ load_homebrew
 "$DOTFILES_DIR/scripts/install_starship.sh"
 "$DOTFILES_DIR/scripts/install_sheldon.sh"
 "$DOTFILES_DIR/scripts/install_raycast.sh"
+"$DOTFILES_DIR/scripts/install_eza.sh"
 
 echo "Setup complete!"
