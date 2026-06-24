@@ -76,7 +76,7 @@ function ghq-fzf() {
 zle -N ghq-fzf
 bindkey '^g' ghq-fzf
 
-sii ()
+siita ()
 {
   cd "$(sii path "$1")"
 }
