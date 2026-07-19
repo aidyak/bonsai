@@ -1,0 +1,17 @@
+onboarding = false
+[theme]
+name = "catppuccin"
+
+[terminal]
+default_shell = "/bin/zsh"
+
+[keys]
+prefix = "ctrl+a"
+
+[[keys.command]]
+key = "prefix+alt+g"
+type = "pane"
+command = "lazygit"
+
+[ui]
+mouse_capture = true

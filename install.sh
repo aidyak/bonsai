@@ -52,6 +52,9 @@ backup_and_link "$DOTFILES_DIR/config/zsh" "$HOME/.config/zsh"
 mkdir -p "$HOME/.config/alacritty"
 backup_and_link "$DOTFILES_DIR/config/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
 backup_and_link "$DOTFILES_DIR/config/tmux/.tmux.conf" "$HOME/.tmux.conf"
+backup_and_link "$DOTFILES_DIR/emacs" "$HOME/.config/emacs"
+mkdir -p "$HOME/.config/herdr"
+backup_and_link "$DOTFILES_DIR/config/herdr/config.toml" "$HOME/.config/herdr/config.toml"
 
 # ==============================
 # install tools
@@ -66,5 +69,6 @@ load_homebrew
 "$DOTFILES_DIR/scripts/install_sheldon.sh"
 "$DOTFILES_DIR/scripts/install_raycast.sh"
 "$DOTFILES_DIR/scripts/install_eza.sh"
+"$DOTFILES_DIR/scripts/install_herdr.sh"
 
 echo "Setup complete!"

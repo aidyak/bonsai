@@ -16,6 +16,6 @@ italic = { family = "Hack Nerd Font", style="Italic" }
 bold_italic = { family = "Hack Nerd Font", style="Bold Italic" }
 
 [terminal]
-shell = { program = "/bin/zsh", args = ["-l", "-c", "tmux a -t 0 || tmux"] }
+shell = { program = "/bin/zsh", args = ["-l"] }
 
 

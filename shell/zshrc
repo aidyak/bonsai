@@ -80,3 +80,10 @@ siita ()
 {
   cd "$(sii path "$1")"
 }
+
+# Herdr auto-start
+# herdr自身が生成するペイン内のシェルではHERDR_PANE_IDが設定されるため、
+# そこでは起動しないようにして多重起動を防ぐ。
+if [[ -o interactive ]] && [[ -t 0 ]] && [[ -z "$HERDR_PANE_ID" ]] && command -v herdr >/dev/null 2>&1; then
+    exec herdr
+fi
